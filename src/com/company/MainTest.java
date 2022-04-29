@@ -6,7 +6,6 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class MainTest {
 
-   // private Main main = new Main();
     @Test
     public void getSubstringWithMaxLengthTest_1_Char(){
         assertEquals(1, getSubstringWithMaxLength("a"));

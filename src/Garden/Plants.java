@@ -1,3 +1,5 @@
+package Garden;
+
 public abstract class Plants {
     private String name;
     private int age;
@@ -13,10 +15,6 @@ public abstract class Plants {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getAge() {

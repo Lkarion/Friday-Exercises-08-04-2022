@@ -1,3 +1,5 @@
+package Garden;
+
 public enum Season {
     SPRING,
     SUMMER,

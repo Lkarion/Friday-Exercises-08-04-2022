@@ -1,4 +1,4 @@
-package com.company;
+package StringDifLength;
 
 public abstract class Transformation {
 

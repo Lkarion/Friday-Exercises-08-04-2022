@@ -1,4 +1,4 @@
-package com.company;
+package StringDifLength;
 
 import java.util.Locale;
 

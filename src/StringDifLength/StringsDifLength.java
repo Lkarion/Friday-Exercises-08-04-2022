@@ -1,4 +1,4 @@
-package com.company;
+package StringDifLength;
 
 public class StringsDifLength {
     public static void main(String[] args) {

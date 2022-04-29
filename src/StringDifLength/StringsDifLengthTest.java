@@ -1,8 +1,7 @@
-package com.company;
+package StringDifLength;
 
-import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
-import static com.company.StringsDifLength.modifyString;
+import static StringDifLength.StringsDifLength.modifyString;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class StringsDifLengthTest {
