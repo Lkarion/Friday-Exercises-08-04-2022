@@ -1,6 +1,6 @@
-package shapes;
+package shapes.Interface;
 
-public class Circle extends Shape{
+public class Circle implements ShapesInterface{
     int radius;
 
     public Circle(int radius) {
@@ -9,7 +9,7 @@ public class Circle extends Shape{
 
 
     @Override
-    int getSquare() {
+    public int getSquare() {
         try {
             if (radius >= 0)
                 return (int)(Math.PI*radius*2);

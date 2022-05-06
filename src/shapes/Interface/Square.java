@@ -1,16 +1,18 @@
-package shapes;
+package shapes.Interface;
 
-public class Square extends Shape{
+public class Square implements ShapesInterface{
     int side;
 
     public Square(int side) {
         this.side = side;
     }
 
+
     @Override
-    int getSquare() {
+    public int getSquare() {
         return side*side;
     }
+
 
     @Override
     public String toString() {

@@ -1,4 +1,4 @@
-package shapes;
+package shapes.AbstractClass;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,6 @@
-package shapes;
+package shapes.Interface;
 
-public class Rectangle extends Shape{
+public class Rectangle implements ShapesInterface{
     int width;
     int length;
 
@@ -10,7 +10,7 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    int getSquare() {
+    public int getSquare() {
         return width*length;
     }
 
