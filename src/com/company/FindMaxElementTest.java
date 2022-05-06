@@ -1,5 +1,6 @@
 package com.company;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,14 +20,16 @@ public class FindMaxElementTest {
         assertEquals(-1, FindMaxElement.findMax(new int[]{-4,-1,-9}));
     }
 
-    //TODO tests on Exceptions: null and empty array
-    /*@Test
-    void test_findMax_Empty(){
-        NumberFormatException thrown = Assertions.assertThrows(NumberFormatException.class, () -> {
-            Integer.parseInt("One");
-        }, "NumberFormatException was expected");
-
-        Assertions.assertEquals("For input string: \"One\"", thrown.getMessage());
-        assertEquals(-1, FindMaxElement.findMax(new int[]{}));
-    }*/
+    @Test
+    public void test_findMax_Empty(){
+        Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
+            FindMaxElement.findMax(new int[]{});
+        });
+    }
+    @Test
+    public void test_findMax_Null(){
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            FindMaxElement.findMax(null);
+        });
+    }
 }

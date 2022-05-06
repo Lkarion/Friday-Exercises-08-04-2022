@@ -3,7 +3,6 @@ package StringTransformerInterface;
 import org.testng.annotations.Test;
 
 import static StringTransformerInterface.StringTransform.modifyString;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class StringTransformTest {
