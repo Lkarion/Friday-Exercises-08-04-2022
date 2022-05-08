@@ -1,4 +1,6 @@
-package shapes.Interface;
+package compare.shapes.Interface;
+
+import compare.shapes.AbstractClass.Shape;
 
 import java.util.Arrays;
 
@@ -16,6 +18,12 @@ public class Solution {
     }
 
     public static int getSumSquare(ShapesInterface... shapesInterfaces){
+       /* int sum = 0;
+        for (ShapesInterface s : shapesInterfaces) {
+            sum += s.getSquare();
+        }
+        return sum;*/
+
         return Arrays.stream(shapesInterfaces)
                 .mapToInt(ShapesInterface::getSquare)
                 .sum();

@@ -1,4 +1,4 @@
-package shapes.AbstractClass;
+package compare.shapes.AbstractClass;
 
 public class Square extends Shape{
     int side;

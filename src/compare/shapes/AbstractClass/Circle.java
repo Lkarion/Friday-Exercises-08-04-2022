@@ -1,4 +1,4 @@
-package shapes.AbstractClass;
+package compare.shapes.AbstractClass;
 
 public class Circle extends Shape {
     int radius;
@@ -10,13 +10,9 @@ public class Circle extends Shape {
 
     @Override
     int getSquare() {
-        try {
-            if (radius >= 0)
-                return (int)(Math.PI*radius*2);
-        }catch (NullPointerException e){
-            System.out.println(e.getMessage());
-        }
-        return 0;
+        if (radius >= 0)
+            return (int)(Math.PI*radius*radius);
+        else return -1;
     }
 
     @Override

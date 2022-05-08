@@ -1,4 +1,4 @@
-package shapes.Interface;
+package compare.shapes.Interface;
 
 public class Circle implements ShapesInterface{
     int radius;
@@ -10,13 +10,9 @@ public class Circle implements ShapesInterface{
 
     @Override
     public int getSquare() {
-        try {
             if (radius >= 0)
-                return (int)(Math.PI*radius*2);
-        }catch (NullPointerException e){
-            System.out.println(e.getMessage());
-        }
-        return 0;
+                return (int)(Math.PI*radius*radius);
+            else return 0;
     }
 
     @Override

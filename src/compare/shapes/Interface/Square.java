@@ -1,4 +1,4 @@
-package shapes.Interface;
+package compare.shapes.Interface;
 
 public class Square implements ShapesInterface{
     int side;

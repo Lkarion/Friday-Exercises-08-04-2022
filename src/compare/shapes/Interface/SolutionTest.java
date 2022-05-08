@@ -1,4 +1,4 @@
-package shapes.Interface;
+package compare.shapes.Interface;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,5 +17,13 @@ class SolutionTest {
         ShapesInterface s3 = new Rectangle(0,0);
         ShapesInterface s4 = new Square(0);
         assertEquals(0,Solution.getSumSquare(s3,s4));
+    }
+    @Test
+    void test_getSumSquare_OneElement(){
+        ShapesInterface s3 = new Rectangle(5,10);
+        assertEquals(50,Solution.getSumSquare(s3));
+    }@Test
+    void test_getSumSquare_NoElements(){
+        assertEquals(0,Solution.getSumSquare());
     }
 }

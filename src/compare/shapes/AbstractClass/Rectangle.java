@@ -1,4 +1,4 @@
-package shapes.AbstractClass;
+package compare.shapes.AbstractClass;
 
 public class Rectangle extends Shape{
     int width;

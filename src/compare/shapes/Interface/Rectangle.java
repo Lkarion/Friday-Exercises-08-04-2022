@@ -1,4 +1,4 @@
-package shapes.Interface;
+package compare.shapes.Interface;
 
 public class Rectangle implements ShapesInterface{
     int width;

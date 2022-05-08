@@ -1,6 +1,9 @@
-package shapes.AbstractClass;
+package compare.shapes.AbstractClass;
 
+import compare.shapes.Interface.Solution;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,24 +12,19 @@ public class ShapeTest {
     @Test
     void test_getSquare_Circle_Normal(){
         Shape s1 = new Circle(5);
-        assertEquals((int)(5*2*Math.PI), s1.getSquare());
+        assertEquals((int)(5*5*Math.PI), s1.getSquare());
     }
     @Test
     void test_getSquare_Circle_Zero(){
         Shape s1 = new Circle(0);
         assertEquals(0, s1.getSquare());
     }
-    /*@Test
-    void test_getSquare_Circle_Null(){
-        Shape s1 = null;
-        assertEquals((int)(5*2*Math.PI), s1.getSquare());
-    }*/
 
-    /*@Test
+    @Test
     void test_getSquare_Circle_Negative(){
         Shape s1 = new Circle(-5);
-        assertEquals((int)(5*2*Math.PI), s1.getSquare());
-    }*/
+        assertEquals(-1, s1.getSquare());
+    }
 
     @Test
     void test_getSquare_Square_Normal(){
@@ -67,5 +65,35 @@ public class ShapeTest {
         Shape s1 = new Square(3);
         Shape s2 = new Square(3);
         assertEquals(0, s1.compareTo(s2));
+    }
+
+    @Test
+    void test_sort_NormalCase(){
+        Shape s1 = new Circle(5);
+        Shape s2 = new Circle(1);
+        Shape s3 = new Rectangle(5,2);
+        Shape s4 = new Square(5);
+        Shape s5 = new Square(3);
+
+        Shape[] actual = {s1,s2,s3,s4,s5};
+        Arrays.sort(actual);
+        Shape[] expected = {s2,s5,s3,s4,s1};
+        assertArrayEquals(expected,actual);
+    }
+    @Test
+    void test_sort_OneElement(){
+        Shape s1 = new Circle(5);
+
+        Shape[] actual = {s1};
+        Arrays.sort(actual);
+        Shape[] expected = {s1};
+        assertArrayEquals(expected,actual);
+    }
+    @Test
+    void test_sort_NoElements(){
+        Shape[] actual = {};
+        Arrays.sort(actual);
+        Shape[] expected = {};
+        assertArrayEquals(expected,actual);
     }
 }
